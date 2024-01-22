@@ -1,0 +1,177 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+    
+}
+
+body, .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 35px;
+    padding: 30px;
+    justify-content: space-between;
+    width: min(100%, 950px);
+}
+
+.mobileimg {
+    display: none;
+}
+
+
+.article {
+    width: 400px;
+    margin: 60px 60px 90px 60px;
+}
+
+p, h1 {
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+ul {
+    text-decoration-style: none;
+    list-style-image: url(/images/icon-list.svg);
+    margin: 0 0 40px 30px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+input, button {
+    padding: 18px;
+    margin: 7px 30px 15px 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 1px solid  grey;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+}
+
+label p {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* card is hidden */
+.hide {
+    display: none;
+  }
+
+
+/* card css */
+.card-2 {
+    background-color: aliceblue;
+    flex-direction: column;
+    width: 550px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 70px;
+     border-radius: 35px;
+}
+
+button {
+    margin-left: auto;
+}
+
+.p2 {
+    width: 370px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.img2 {
+    margin-bottom: 40px;
+}
+
+.p2 span {
+    font-weight: 600;
+}
+
+/* hover and active effects */
+.button:hover {
+    background-image: linear-gradient(to right,   hsla(4, 100%, 67%, .8), tomato);
+}
+
+
+/* mobile-size */
+@media only screen and (max-width: 800px) {
+    .card {
+        flex-direction: column-reverse;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .desktopimg {
+        display: none;
+    }
+    .mobileimg {
+        display: unset;
+    }
+
+    .article {
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+
+/* mobile card css */
+.card-2 {
+
+    background-color: aliceblue;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    border-radius: 0px;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 30px;
+}
+
+.button {
+    width: 320px;
+    margin-top: 100px;
+}
+
+.img2 {
+    margin-top: 100px;
+}
+
+.p2 {
+    width: 100%;
+}
+
+}
