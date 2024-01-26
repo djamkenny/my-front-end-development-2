@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light--pink: hsl(275, 100%, 97%);
+    --Grayish--purple: hsl(292, 16%, 49%);
+    --Dark--purple: hsl(292, 42%, 14%);
+}
+
+
+body {
+    min-height: 100vh;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Work sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: url(/images/background-pattern-desktop.svg) no-repeat;
+    background-color: var(--Light--pink);
+    background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.faq-accordion {
+    display: block;
+    padding: 40px 25px;
+    margin: auto;
+    color: hsl(292, 42%, 14%);
+    background-color: hsl(0, 0%, 100%);
+    width: 50%;
+    border-radius: 1rem;
+    box-shadow: 0px 30px 100px -50px rgb(182, 165, 165);
+}
+
+.faq-heading {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 32px;
+}
+
+.faq-content {
+    margin-bottom: 10px;
+}
+
+.faq-dropdown {
+    border-bottom: 1px solid var(--Light--pink);
+}
+
+.faq-dropdown-header {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 18px 0;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.faq-dropdown-header h2 {
+    font-weight: 600;
+    width: 80%;
+}
+
+.faq-icon {
+    border: 0px;
+    width: 30px;
+    height: 30px;
+    background: url(/images/icon-plus.svg);
+    background-size: cover;
+    background-color: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+
+.faq-dropdown-body p {
+    margin-bottom: 12px;
+    opacity: .6;
+    display: none;
+}
+
+.faq-dropdown-body p.open{
+    display: block;
+
+}
+.faq-icon.open {
+    background: url(/images/icon-minus.svg);
+    transition: .3s ease;
+}
+
+.faq-dropdown-header:hover {
+    color: blueviolet;
+}
+
+
+
+@media (max-width: 760px) {
+    body {
+        background: url(/images/background-pattern-mobile.svg) no-repeat;
+        background-size: 100%;
+        min-width: 35px;
+    }
+    
+    .faq-accordion{
+        min-width: 93%;
+        margin: auto;
+    }
+    
+    .faq-heading {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
